@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bestellformular</title>
+</head>
+<body>
+    <h1>Bestellformular für Bücher</h1>
+    <form action="berechnung.php" method="post">
+        <label for="self_php">Self-PHP:</label>
+        <input type="number" name="self_php" id="self_php" min="0" value="0"><br>
+        
+        <label for="php_referenz">PHP-Referenz:</label>
+        <input type="number" name="php_referenz" id="php_referenz" min="0" value="0"><br>
+        
+        <label for="php_kochbuch">PHP-Kochbuch:</label>
+        <input type="number" name="php_kochbuch" id="php_kochbuch" min="0" value="0"><br>
+        
+        <label for="aufmerksamkeit">Wie sind Sie auf diese Seite aufmerksam geworden?</label>
+        <select name="aufmerksamkeit" id="aufmerksamkeit">
+            <option value="stammkunde">Ich bin Stammkunde</option>
+            <option value="tv_werbung">TV Werbung</option>
+            <option value="telefonbuch">Telefonbuch</option>
+            <option value="mundpropaganda">Mundpropaganda</option>
+        </select><br>
+
+        <input type="submit" value="Bestellung absenden">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+

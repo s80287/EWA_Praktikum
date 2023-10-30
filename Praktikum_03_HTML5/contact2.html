@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Praktikum 03: Kontaktformular mit Funktionalitäten</h1>
+        <p>
+            Teil a: Text-Input Nachname Vorname mit mind. 2 Buchstaben<br>
+            Teil b: Kunden-Emailadresse mit Prüfung auf valide Adresse<br>
+            Teil c: Text-Eingabe Straße, Ort (max. 50 Zeichen), PLZ (Wert von 01067 bis 99998)<br>
+            Teil d: Input URL, not required<br>
+            Teil e: Input number, Alter 3 - 120<br>
+            Teil f: Input Range, Interesse Kunden 0 - 10, Vorgabewert 5<br>
+            Teil g: Textfeld 5 Zeilen, Platzhalter „Bitte geben Sie hier Ihre Anfrage an uns
+            ein!“<br>
+            Teil h: Button "Anfrage absenden" mit Dummy-URL<br>
+
+        </p>
+
+        <canvas id="canvas1" width="200" height="150" style="border:1px solid #000000;">Your browser does not understand canvas-elements</canvas>
+        
+        <script>
+            var c = document.getElementById("canvas1");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script> 
+
+        <form>
+            <!-- Teil a -->
+            <label for="fname">Vorname:</label><br>
+            <input type="text" id="fname" name="fname" pattern="[A-z]{2,}" required><br>
+            <label for="lname">Nachname:</label><br>
+            <input type="text" id="lname" name="lname" pattern="[A-z]{2,}" required><br>
+            <!-- <input type="submit" value="Absenden Namen"><br><br> -->
+            <!-- Teil b -->
+            <label for="cemail">Email:</label><br>
+            <input type="email" name="cemail" required><br>
+            <!-- <input type="submit" value="Absenden Email"><br><br> -->
+            <!-- Teil c -->   
+            <label for="street">Straße:</label><br>
+            <input type="text" id="street" name="street" pattern="{,50}"><br>
+            <label for="city">Ort:</label><br>
+            <input type="text" id="city" name="city" pattern="[A-z]{,50}"><br>
+            <label for="zip">PLZ:</label><br>
+            <!-- 5 Ziffern reichen -->
+            <input type="text" id="zip" name="zip"
+                pattern="[0-9]{5}" title="5 Nummer von PLZ von 01067 bis 99998"><br>
+            <!-- <input type="submit" value="Absenden Straße, Ort, PLZ"><br><br> -->
+            
+            <!-- Teil d -->
+            <label for="curl">URL:</label><br>
+            <input type="url" id="curl" name="curl"><br>
+            <!-- <input type="submit" value="Absenden URL"><br><br> -->
+
+            <!-- Teil e -->
+            <label for="age">Alter:</label><br>
+            <input type="number" id="age" name="age" min="3" max="120"><br>
+            <!-- <input type="submit" value="Absenden Alter"><br><br> -->
+
+            <!-- Teil f -->
+            <label for="interest">Kundeninteresse (von 0 bis 10):</label><br>
+            <input type="range" id="interest" name="interest" min="0" max="10" value="5"><br>
+
+            <!-- Teil g -->
+            <label for="request">Anfrage:</label><br>
+            <textarea id="request" name="request" rows="5" cols="50">Bitte geben Sie hier Ihre Anfrage an uns ein!</textarea><br>
+            
+            <!-- Teil h -->
+            <!-- <input type="submit" value="Anfrage absenden" onclick="window.location.href='https://www.htw-dresden.de'"> -->
+            <input type="submit" value="Anfrage absenden">
+        </form>
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bestellformular</title>
+</head>
+<body>
+    <h1>Bestellformular für PHP-Bücher</h1>
+    <form action="berechnung_tien.php" method="post">
+        <label for="self_php">Self-PHP:</label>
+        <input type="number" id="self_php" name="self_php" min="0" value="0"><br>
+
+        <label for="php_referenz">PHP-Referenz:</label>
+        <input type="number" id="php_referenz" name="php_referenz" min="0" value="0"><br>
+
+        <label for="php_kochbuch">PHP-Kochbuch:</label>
+        <input type="number" id="php_kochbuch" name="php_kochbuch" min="0" value="0"><br>
+
+        <label for="aufmerksamkeit">Wie sind Sie auf diese Seite aufmerksam?</label>
+        <select id="aufmerksamkeit" name="aufmerksamkeit">
+            <option value="stammkunde">Stammkunde</option>
+            <option value="tv_werbung">TV-Werbung</option>
+            <option value="telefonbuch">Telefonbuch</option>
+            <option value="mundpropaganda">Mundpropaganda</option>
+        </select><br>
+
+        <button type="submit" value="Absenden">Bestellung absenden</button>
+
+    </form>
+</body>
+</html>
